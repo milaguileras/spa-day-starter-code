@@ -44,7 +44,7 @@ public class SpaDayController {
     }
 
     @GetMapping(value="")
-    @ResponseBody
+    @ResponseBody()
     public String customerForm () {
         String html = "<form method = 'post'>" +
                 "Name: <br>" +
@@ -60,6 +60,7 @@ public class SpaDayController {
                 "<select name = 'manipedi'>" +
                 "<option value = 'manicure'>Manicure</option>" +
                 "<option value = 'pedicure'>Pedicure</option>" +
+                "<option value = 'manicure && pedicure'> Manicure and Pedicure</option>"+
                 "</select><br>" +
                 "<input type = 'submit' value = 'Submit'>" +
                 "</form>";
@@ -81,6 +82,12 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
+
+        model.addAttribute("name",name);
+        model.addAttribute("skintype",skintype);
+        model.addAttribute("manipedi",manipedi);
+        model.addAttribute("appropriateFacial",appropriateFacials);
+
 
         return "menu";
     }

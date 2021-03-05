@@ -1,5 +1,5 @@
 body {
-    background-color: pink;
+    background-color: #FAEBD7 ;
 }
 
 div {
@@ -9,6 +9,17 @@ div {
     text-align: center;
     background-color: white;
 }
+.form {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: thick;
+    border-color: pink;
+}
+
 
 h1 {
     margin: auto;
